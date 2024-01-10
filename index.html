@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>React JSX Babel-Standalone Import/Export</title>
+		<meta charset="utf-8" />
+		<script src="./lib/tailwindcss.js"></script>
+		<script src="./lib/react.js"></script>
+		<script src="./lib/react-dom.js"></script>
+		<script src="./lib/babel.js"></script>
+	</head>
+	<body>
+		<div id="root"></div>
+
+		<script
+			data-plugins="transform-modules-umd"
+			type="text/babel"
+			src="./src/utils/products.js"
+		></script>
+		<script
+			data-plugins="transform-modules-umd"
+			type="text/babel"
+			src="./src/components/CartItem.js"
+		></script>
+		<script
+			data-plugins="transform-modules-umd"
+			type="text/babel"
+			src="./src/components/CartList.js"
+		></script>
+		<script type="text/babel" data-plugins="transform-modules-umd" src="./src/main.js"></script>
+	</body>
+</html>
